@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penghapus Latar Belakang Gambar AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <h1>Penghapus Latar Belakang Gambar AI</h1>
+        <p class="subtitle">Hapus latar belakang gambar Anda secara otomatis dengan teknologi AI</p>
+
+        <div class="upload-section">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-content">
+                    <div class="upload-icon">📸</div>
+                    <div class="upload-text">Seret & Lepas Gambar di Sini</div>
+                    <div class="upload-subtext">atau</div>
+                    <label for="imageInput" class="file-input-wrapper">
+                        📁 Pilih File
+                    </label>
+                     <input type="file" id="imageInput" accept="image/*" style="display:none;">
+                    <div class="upload-subtext">Format yang didukung: JPG, PNG, WebP (Maks. 10MB)</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading">
+            🔄 Sedang memproses gambar...
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <h2>📷 Gambar Asli</h2>
+                <div class="image-container" id="originalContainer">
+                    <div class="placeholder">Gambar asli akan muncul di sini</div>
+                    <img id="originalImage" src="" alt="Gambar Asli" style="display: none;">
+                </div>
+            </div>
+            <div class="box">
+                <h2>✨ Hasil</h2>
+                <div class="image-container" id="resultContainer">
+                    <div class="placeholder">Hasil penghapusan latar belakang akan muncul di sini</div>
+                    <img id="resultImage" src="" alt="Gambar Hasil" style="display: none;">
+                </div>
+                <div class="result-actions" id="resultActions">
+                    <button id="downloadBtn" class="download-btn">💾 Unduh Gambar</button>
+                    <button id="resetBtn" class="reset-btn">🔄 Proses Gambar Lain</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
